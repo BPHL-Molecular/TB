@@ -28,3 +28,27 @@ Percent Reference Genome Covered/
 Coverage Drop/
 QC_Status/
 Drug_Resistance_Summary/
+
+### Using bracken_TB to check failed TB samples for contamination
+The bracken_TB tool provides species-level taxonomic classification to help identify potential contaminants in failed samples.
+
+Prerequisites:
+- Download the bracken_TB folder
+- Nextflow needed (if not using HiPerGator)
+- Access to the failed TB samples fastq.gz files
+
+Copy the failed TB samples fastq.gz files into the fastqs folder;
+
+Then 
+```bash
+sbatch srun_bracken.sh
+```
+Or (if not using HiPerGator)
+
+```bash
+nextflow run main.nf --input "./fastqs/*_{R1_001,R2_001}.fastq.gz"
+more results/bracken_out/*bracken >all_bracken.report
+```
+Output
+- This section generates a report: all_bracken.report, which includes all the samples' bracken results.
+

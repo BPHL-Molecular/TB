@@ -1,0 +1,6 @@
+[submodule "varpipe"]
+	path = varpipe
+	url = https://github.com/CDCgov/NCHHSTP-DTBE-Varpipe-WGS.git
+[submodule "TBProfiler"]
+	path = TBProfiler
+	url = https://github.com/jodyphelan/TBProfiler.git

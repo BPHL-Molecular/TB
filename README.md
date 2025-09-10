@@ -68,6 +68,7 @@ Then
 Setup:
 
 - Copy TB sample fastq.gz files into the fastqs/ folder
+- Copy samplesheet.sh and tbprofiler.sh into the TBProfiler/ folder
 - Create sample sheet file
  
 ```bash
@@ -85,4 +86,4 @@ tb-profiler collate
 ```
 Output
 - Individual sample reports in results/ directory
-- The collate function generates tbprofiler.txt under /TBProfiler, which summarize all the drug resistance infomation.
+- The collate function generates tbprofiler.txt under TBProfiler/, which summarize all the drug resistance infomation.

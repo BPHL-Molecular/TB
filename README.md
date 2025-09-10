@@ -52,3 +52,37 @@ more results/bracken_out/*bracken >all_bracken.report
 Output
 - This section generates a report: all_bracken.report, which includes all the samples' bracken results.
 
+### Run TBprofiler to check more loci
+
+Prerequisites:
+- Create conda environment:
+ $ conda create -n TBprofiler python=3.8
+ $ conda activate TBprofiler
+ $ conda install -c bioconda tb-profiler
+
+If not working:
+ $ conda create --name TBprofiler --file ./conda/linux-latest.txt
+Then
+ $ conda activate TBprofiler
+
+Setup:
+
+- Copy TB sample fastq.gz files into the fastqs/ folder
+- Create sample sheet file
+ 
+```bash
+bash samplesheet.sh
+```
+Run analysis:
+```bash
+sbatch tbprofiler.sh
+```
+
+Generate summary:
+```bash
+tb-profiler collate
+
+```
+Output
+- Individual sample reports in results/ directory
+- The collate function generates tbprofiler.txt under /TBProfiler, which summarize all the drug resistance infomation.

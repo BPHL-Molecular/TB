@@ -56,13 +56,19 @@ Output
 
 Prerequisites:
 - Create conda environment:
+  
  $ conda create -n TBprofiler python=3.8
+ 
  $ conda activate TBprofiler
+ 
  $ conda install -c bioconda tb-profiler
 
 If not working:
+
  $ conda create --name TBprofiler --file ./conda/linux-latest.txt
+ 
 Then
+
  $ conda activate TBprofiler
 
 Setup:

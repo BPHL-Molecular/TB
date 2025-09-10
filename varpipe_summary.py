@@ -56,9 +56,9 @@ def concatenate_txt_files(output_file="summary.tsv"):
                         
                         # Format: Drug: Interpretation (Variant info if available)
                         if variant and variant != 'No reportable variant detected':
-                            drug_info = f"{drug}: {interpretation} ({variant})"
+                            drug_info = f"{interpretation} ({variant})"
                         else:
-                            drug_info = f"{drug}: {interpretation}"
+                            drug_info = f"{interpretation}"
                         
                         drug_summary.append(drug_info)
                     

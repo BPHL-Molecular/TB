@@ -95,31 +95,34 @@ Output
 - The collate function generates tbprofiler.txt under TBProfiler/, which summarize all the drug resistance infomation.
 
 
-New updated nf_core version varpipe
+### Updated nf-core varpipe Version
 
-The needed files are in the /nf_varpipe/ folder:
-Replace the create_report.py for report generation in the path:
-/path_to/tbvarpipe/modules/amd-ph-core/varpipe/report/templates
-Use the sbatch cript for run in HPG:
-srun_nfvarpipe.sh
+The required files are located in the `/nf_varpipe/` folder.
 
-The fastq files' sample names needed modification:
+Replace `create_report.py` with the updated version for report generation:
+
+```text
+/path_to/tbvarpipe/modules/amd-ph-core/varpipe/report/templates/
+```
+
+Use `srun_nfvarpipe.sh` to run the pipeline on HiPerGator.
+
+FASTQ sample names need to be modified before running the pipeline:
 
 ```bash
 for i in *_R1_001.fastq.gz; do mv -- "$i" "${i/_L001_R1_001.fastq.gz/_1.fastq.gz}"; done
 for i in *_R2_001.fastq.gz; do mv -- "$i" "${i/_L001_R2_001.fastq.gz/_2.fastq.gz}"; done
 ```
 
-run samplesheet.sh file: 
+Generate the sample sheet:
 
 ```bash
 bash samplesheet.sh
 ```
 
-to generate sample sheet, then
+Then submit the pipeline:
 
 ```bash
 sbatch srun_nfvarpipe.sh
 ```
-
 

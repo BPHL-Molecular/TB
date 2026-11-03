@@ -3,7 +3,7 @@
 **Version 1.0**
 
 TBQuery takes TB sample summary files from Varipipeline and adds drug-resistance
-grades from the **WHO mutation catalogue** (`WHO-UCN-TB-2023.7-eng.xlsx`).
+grades from the **WHO mutation catalogue** ([`WHO-UCN-TB-2023.7-eng.xlsx`](https://github.com/GTB-tbsequencing/mutation-catalogue-2023/blob/main/Final%20Result%20Files/WHO-UCN-TB-2023.7-eng.xlsx)).
 
 For each mutation in a sample, TBQuery finds it in the WHO catalogue, adds the
 WHO grade, and saves a **separate Excel file for each sample**. Cells that need a
